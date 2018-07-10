@@ -44,39 +44,11 @@ ul {
 li {
     display:inline;
 }
-/*
- * Styles for the deck of cards
- */
+
+/*This section will be for collapsible menu*/
+
 .char-select {
     text-align: center;
-}
-
-/*
- * Styles for the Score Panel
- */
-
-.score-panel {
-    text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
-}
-
-.timer{
-  margin-left: 20px;
-  text-align: center;
-  display: inline-block;
-}
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-    list-style: none;
-}
-
-.score-panel .restart {
-    float: right;
-    cursor: pointer;
 }
 
 aside {
@@ -95,6 +67,7 @@ aside {
     transition: left 500ms;
 }
 
+/* For modal popup */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
