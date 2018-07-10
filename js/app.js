@@ -60,8 +60,23 @@ class Player extends Entity {
   update(dt) {
     super.update();
     if(this.isOutOfBoundsY && !this.moving && !this.win) {
-      alert('WIN!');
+      //alert('WIN!');
       this.win = true;
+      const modalContent = document.querySelector('.modal-content');
+      const modal = document.getElementById('myModal'); // Get the modal
+      modalContent.innerHTML = `<span class="close">&times;</span><p>CONGRATULATIONS!</p><p>You got past the bugs!</p><button type="button" onclick=location.reload()>Play again?</button>`;
+      modal.style.display = "block";
+      const span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+        }
     }
   }
 
@@ -133,6 +148,7 @@ document.addEventListener('keyup', function(e) {
 //   select.innerHTML = player.render();
 // }
 // selectChar();
+
 const restart = document.querySelector('.restart');
       restart.addEventListener('click', function(){
       location.reload();

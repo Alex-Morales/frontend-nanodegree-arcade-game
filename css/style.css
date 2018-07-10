@@ -78,6 +78,23 @@ li {
     float: right;
     cursor: pointer;
 }
+
+aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    border: 1px solid grey;
+    background-color: rgba(34, 102, 170, 0.6);
+    color: whitesmoke;
+    padding-left: 5px;
+    -webkit-transition: left 500ms;
+    -o-transition: left 500ms;
+    -moz-transition: left 500ms;
+    transition: left 500ms;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
