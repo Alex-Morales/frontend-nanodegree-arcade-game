@@ -24,6 +24,7 @@
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+
 class Entity {
   constructor() {
     this.sprite = 'images/';
@@ -64,6 +65,11 @@ class Player extends Entity {
     }
   }
 
+  render() {
+    super.render();
+    this.moving = false;
+  }
+
   handleInput(input) {
     switch(input) {
       case 'left':
@@ -79,6 +85,7 @@ class Player extends Entity {
         this.y = this.y < 5 ? this.y + 1 : this.y;
         break;
     }
+    this.moving = true;
   }
 
 }
@@ -89,6 +96,7 @@ class Enemy extends Entity {
     this.sprite += 'enemy-bug.png';
     this.x = x;
     this.y = y;
+    this.speed = 1 + Math.random() * 3;
   }
   update(dt){
     super.update();
@@ -96,7 +104,7 @@ class Enemy extends Entity {
       this.x = -1
     }
     else{
-      this.x += dt;
+      this.x += this.speed * dt;
     }
   }
 }
@@ -119,3 +127,13 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+// function selectChar() {
+//   let select = document.querySelector('.char-select')
+//   select.innerHTML = player.render();
+// }
+// selectChar();
+const restart = document.querySelector('.restart');
+      restart.addEventListener('click', function(){
+      location.reload();
+    });

@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="container">
+      <header>
+          <h1>Frogger Game Clone</h1>
+      </header>
+      <section class="score-panel">
+          <div class="timer">
+            Timer:     <span class="minutes">00</span>:<span class="seconds">00</span>
+          </div>
+          <div class="restart">
+          <i class="fa fa-repeat"></i>
+          </div>
+          <aside>
+            <div class="char-select">
+              <h4>Select your character</h4>
+              <ul class="characters">
+                <li>
+                  <img src="images/char-boy.png" alt = "boy">
+                </li>
+                <li>
+                  <img src="images/char-cat-girl.png" alt = "cat girl">
+                </li>
+                <li>
+                  <img src="images/char-horn-girl.png" alt = "horn girl">
+                </li>
+                <li>
+                  <img src="images/char-pink-girl.png" alt = "pink girl">
+                </li>
+                <li>
+                  <img src="images/char-princess-girl.png" alt = "princess">
+                </li>
+              </ul>
+            </div>
+          </aside>
+      </section>
+    </div>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
